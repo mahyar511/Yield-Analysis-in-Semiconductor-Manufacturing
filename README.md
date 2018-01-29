@@ -17,7 +17,7 @@ In this project, <b>[SECOM](http://archive.ics.uci.edu/ml/datasets/secom)</b> da
 # Table of Contents
 
 <b>
-1. [Data-Set Description](#DSD)
+1. [Data-Set Description](#DSD)<br>
 2. [Dimension Reduction](#DR)
 3. [Exploratory Data Analysis (EDA)](#EDA)
 4. [Statistical Analysis & Hypothesis Testing](#SAHT)
