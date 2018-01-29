@@ -7,13 +7,13 @@ In this project, <b>[SECOM](http://archive.ics.uci.edu/ml/datasets/secom)</b> da
 # Table of Contents
 
 <b>
-1. [Data-Set Description](#DSD)<br>
-2. [Dimension Reduction](#DR)<br>
-3. [Exploratory Data Analysis (EDA)](#EDA)<br>
-4. [Statistical Analysis & Hypothesis Testing](#SAHT)<br>
-5. [Time Series Analysis](#TSA)<br>
-6. [Imbalanced Data](#ID)<br>
-7. [Machine Learning Model Development](#MLMD)<br>
-8. [XGB Model Optimization](#XGBMO)<br>
-9. [Final Note](#FN)<br>
+1. Data-Set Description<br>
+2. Dimension Reduction<br>
+3. Exploratory Data Analysis (EDA)<br>
+4. Statistical Analysis & Hypothesis Testing<br>
+5. Time Series Analysis<br>
+6. Imbalanced Data<br>
+7. Machine Learning Model Development<br>
+8. XGB Model Optimization<br>
+9. Final Note<br>
 </b>
