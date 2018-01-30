@@ -19,7 +19,7 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 # Table of Contents
 
 <b>
-1. Data-Set Description<br>
+1. [Data-Set Description](#DSD)<br>
 2. Dimension Reduction<br>
 3. Exploratory Data Analysis (EDA)<br>
 4. Statistical Analysis & Hypothesis Testing<br>
@@ -29,3 +29,12 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 8. XGB Model Optimization<br>
 9. Final Note<br>
 </b>
+
+
+
+<br>
+<a id="DSD"></a>
+### 1- Data-Set Description 
+<div style="text-align: justify">
+The SECOM data-set comes in 2 separate files. "secom_data", which is consisting of 1567 examples each with 591 features a 1567 x 591 matrix and "secom_labels", which is containing the classification labels and date time stamp for each example.
+Each example represents a single production entity with associated measured features and the labels represent a simple pass/fail yield for in house line testing and associated date time stamp. Where –1 corresponds to a pass and 1 corresponds to a fail and the data time stamp is for that specific test point. The SECOM data-set is anonymized, which results in no feature identification. In addition, all categorical data is converted to numerical value. <div> 
