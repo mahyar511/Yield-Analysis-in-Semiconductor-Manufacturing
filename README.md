@@ -6,12 +6,9 @@ A complex modern semiconductor manufacturing process is normally under consisten
 <p align="center">
 <img src="Figures/process.gif"  width="40%">  
 </p>
-<div style="text-align: center">
-
+<p align="center">
 Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
-
-
-</div>
+</p>
 
 <br>
 In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
@@ -25,7 +22,7 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 6. [Imbalanced Data](#ID)
 7. [Machine Learning Model Development](#MLMD)
 8. [XGB Model Optimization](#XGBMO)
-9. [Final Note] (#FN)
+9. [Final Note](#FN)
 
 
 
@@ -44,7 +41,6 @@ As mentioned earlier, there are 591 features collected for each product, but onl
 <p align="center">
 <img src="Figures/LASSO-01.png"  width="40%"> 
 </p>  
-<br>
 <div style="text-align: center">
 Figure 2. Feature Reduction Via Lasso Regularization
 <div>
@@ -59,7 +55,6 @@ We start exploring selected features by making correlation coefficient pair plot
 <p align="center">
 <img src="Figures/pcp.png"  width="60%"> 
 </p>  
-<br>
 <div style="text-align: center">
 Figure 3. Correlation Coefficient Pair Plot
 <div>
@@ -70,7 +65,6 @@ Understanding data variations and outliers is the next step in exploratory data 
 <p align="center">
 <img src="Figures/BoxPlot.png" > 
 </p>  
-<br>
 <div style="text-align: center">
 Figure 4. Selected Features Box Plot  
 <div>
