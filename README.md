@@ -5,8 +5,7 @@ A complex modern semiconductor manufacturing process is normally under consisten
 <br><br>
 <p align="center">
  
-<img src="Figures/process.gif"  width="50%">
-
+<img src="Figures/process.gif"  width="50%"><br>
 <a>Figure 1. [Basic Semiconductor Manufacturing Process](https://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)</a>
 </p>
 <br>
