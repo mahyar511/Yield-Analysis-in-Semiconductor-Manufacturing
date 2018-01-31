@@ -204,15 +204,17 @@ Here, we are going to fine-tune significant parameters of the model in order to 
 **7- reg_lambda:** L2 regularization term on weights \[default=1]<br>
 
 <br>
-Parameter |  Value | ROC |
- :- |:-: | :-: |
- max_depth   | 6 | 0.683 |
-min_child_weight   | 14 | 0.714 |
-gamma  | 0.4 | 0.720 |
-subsample  | 0.8 | 0.722|
-colsample_bytree  | 0.75 | 0.722 |
-reg_alpha  | 0.5 |0.723 |
-reg_lambda  | 1 | 0.723 |
+
+|Parameter |  Value | ROC |
+ |:--- |:---: | :---: |
+ |max_depth   | 6 | 0.683 |
+|min_child_weight   | 14 | 0.714 |
+|gamma  | 0.4 | 0.720 |
+|subsample  | 0.8 | 0.722|
+|colsample_bytree  | 0.75 | 0.722 |
+|reg_alpha  | 0.5 |0.723 |
+|reg_lambda  | 1 | 0.723 |
+
 <br>
 
 Table above shows final parameters and associated ROC score. As it is evidence, optimization is increased ROC scores from 0.68 to 0.72. The model is also regularized in order to avoid over-fitting. The optimized model is then used for final prediction on test set. 
