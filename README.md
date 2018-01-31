@@ -7,11 +7,11 @@ A complex modern semiconductor manufacturing process is normally under consisten
 <img src="Figures/process.gif"  width="40%">  
 </p>
 <p align="center">
-Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
+Figure 1. [Basic Semiconductor Manufacturing Process] (http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
 </p>
 
 <br>
-In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
+In this project,  [SECOM] (http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
 
 # Table of Contents
 1. [Data-Set Description](#DSD)
@@ -40,10 +40,8 @@ As mentioned earlier, there are 591 features collected for each product, but onl
 <br>
 <p align="center">
 <img src="Figures/LASSO-01.png"  width="40%"> 
-</p>  
-<div style="text-align: center">
 Figure 2. Feature Reduction Via Lasso Regularization
-<div>
+</p>  
 <br>
 
 In LASSO regularization technique, by tuning alpha (regularization rate) one can determine how many features to remain in the data-set. It is recommended to examine range of regularization rates to reach the optimal value. As shown above, in current case alpha = 0.2 is chosen as the optimal value, which results in drastic reduction in number of features from 591 to 41! <div>
