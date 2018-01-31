@@ -19,7 +19,7 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 # Table of Contents
 
 <b>
-* [1. Data-Set Description](#DSD)<br>
+* [Data-Set Description](#DSD)<br>
 2. Dimension Reduction<br>
 3. Exploratory Data Analysis (EDA)<br>
 4. Statistical Analysis & Hypothesis Testing<br>
@@ -30,7 +30,8 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 9. Final Note<br>
 </b>
 
-<a id="DSD"></a>
+
+<a name="DSD"></a>Data-Set Description
 ###  1- Data-Set Description 
 <div style="text-align: justify">
 The SECOM data-set comes in 2 separate files. "secom_data", which is consisting of 1567 examples each with 591 features a 1567 x 591 matrix and "secom_labels", which is containing the classification labels and date time stamp for each example.
