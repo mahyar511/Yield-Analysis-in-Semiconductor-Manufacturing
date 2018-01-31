@@ -113,7 +113,9 @@ This category shows non-uniform distribution of pass & fail samples. For feature
 Previous section showed that if some features subscribe to certain features, there might be significant difference in yield. However, visualization is not enough and it is necessary to statistically test this hypothesis. Here, F484, which has been highlighted in previous section, is examined as an example. 
 <br>
 Higher fail ratio: 0.069
+
 Lower fail ration: 0.025
+
 Ratio difference: 0.044
 <p align="center">
 <img src="Figures/Hypothesis.png">
@@ -124,13 +126,43 @@ Figure 6. Hypothesis test result for 3000 replications
 <br>
 High value of P-value (0.54) indicates that the difference in yield before and after F484's threshold (dash red line) is significant. In this case, at least 54% of statistically simulated results show 63% or more decrease in failed ratio if operation can take place after designated threshold, hence this feature can be considered as an optimization point for further actions.
 
+### <a name="TSA"></a> 5- Time Series Analysis
+Since label data-set is timestamped, it is possible to conduct time series analysis on data as well. Here, we calculate failed ratio on daily basis and the single out days with highest failed ratio (more than 50%) to examine their operation condition for F484 parameter. 
+
+<p align="center">
+<img src="Figures/100Days.png">
+</p>
+<p align="center">
+Figure 7. Daily failed ratio 
+</p>
+<br>
+Figure 8 clearly illustrates that at none of these four days, F484 parameter passes 680 threshold (dash red line), recommended by hypothesis testing. Same analysis can be done for other category III parameters to bring better understanding of operation condition and its effect on yield efficiency.  
+<p align="center">
+<img src="Figures/F484_Worst.png">
+</p>
+<p align="center">
+Figure 8. Feature F484 at failed ratio > 50% 
+</p>
+<br>
+
+
 ### <a name="ID"></a> 6- Imbalanced Data
 The fail/total ratio indicates that imbalanced representation of binary classes with only 6 % fail class (label=1). We split the data-set to training and test set. Common practice to address imbalance data is to perform under-sampling or over-sampling on training set, which can be simply done by using imblearn library (as shown below). Due to relatively small size of the entire data-set, employing more complex under or over sampling won't be beneficiary. Despite showing both under-sampling and over-sampling here, but we are going to use original training set in Machine Learning section. Because, Extreme Gradient Boosting method inherently boosts learning from under-represented data. 
 
 Number of passed sample: 1463
+
 Number of failed sample: 104
+
 Default Ratio (failed/total) : 0.066
+
 ########################################
+
 Size of training data-set: (1096, 41)
+
 Size of under sampling data_set: (146, 41)
+
 Size of overer sampling data_set: (2046, 41)
+
+
+### <a name="MLMD"></a> 7- Machine Learning Model Development
+Due to data-set anonymity, which makes outlier removal impossible and also considering imbalanced data, which makes learning process quite difficult, we decided to choose **Extreme Gradient Boosting** Machine learning technique to develop our predictive model. This technique is not susceptible to outliers and can perfectly handle both numerical and categorical features. It also boosts learning process from hard-to-learn samples by increasing their wight factor in every iteration, which becomes handy in imbalance data-set. For model optimization we followed [AARSHAY JAIN](https://www.analyticsvidhya.com/blog/author/aarshay/) guideline. The complete article can be found at this [address](https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/).   
