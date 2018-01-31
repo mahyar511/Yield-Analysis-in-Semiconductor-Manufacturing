@@ -107,3 +107,30 @@ Figure 5-3. Example of Category III : Non-Uniform Distribution of Pass & Fail
 
 This category shows non-uniform distribution of pass & fail samples. For features in this category, there are substantial range of values with relatively low failure rate. Therefore, these features are prime candidates for further process optimization. To take this to the next step, one needs first conduct hypothesis testing to figure out if these low failure rate is statistically significant and if true, incorporate more domain expertise to address the issue in real world operation. <div>
 <br>
+
+### <a name="SAHT"></a> 4- Statistical Analysis & Hypothesis Testing
+
+Previous section showed that if some features subscribe to certain features, there might be significant difference in yield. However, visualization is not enough and it is necessary to statistically test this hypothesis. Here, F484, which has been highlighted in previous section, is examined as an example. 
+<br>
+Higher fail ratio: 0.069
+Lower fail ration: 0.025
+Ratio difference: 0.044
+<p align="center">
+<img src="Figures/Hypothesis.png">
+</p>
+<p align="center">
+Figure 6. Hypothesis test result for 3000 replications
+</p>
+<br>
+High value of P-value (0.54) indicates that the difference in yield before and after F484's threshold (dash red line) is significant. In this case, at least 54% of statistically simulated results show 63% or more decrease in failed ratio if operation can take place after designated threshold, hence this feature can be considered as an optimization point for further actions.
+
+### <a name="ID"></a> 6- Imbalanced Data
+The fail/total ratio indicates that imbalanced representation of binary classes with only 6 % fail class (label=1). We split the data-set to training and test set. Common practice to address imbalance data is to perform under-sampling or over-sampling on training set, which can be simply done by using imblearn library (as shown below). Due to relatively small size of the entire data-set, employing more complex under or over sampling won't be beneficiary. Despite showing both under-sampling and over-sampling here, but we are going to use original training set in Machine Learning section. Because, Extreme Gradient Boosting method inherently boosts learning from under-represented data. 
+
+Number of passed sample: 1463
+Number of failed sample: 104
+Default Ratio (failed/total) : 0.066
+########################################
+Size of training data-set: (1096, 41)
+Size of under sampling data_set: (146, 41)
+Size of overer sampling data_set: (2046, 41)
