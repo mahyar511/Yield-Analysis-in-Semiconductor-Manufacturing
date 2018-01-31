@@ -11,7 +11,7 @@ Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kul
 </p>
 
 <br>
-In this project, [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: 
+In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/)  data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: 
 
 # Table of Contents
 1. [Data-Set Description](#DSD)
@@ -207,7 +207,7 @@ Here, we are going to fine-tune significant parameters of the model in order to 
 Table 1. Optimized Parameters for XGB Model 
 </p> 
 
-<p align="center">
+<center>
  
 |Parameter |  Value | ROC |
  |:--- |:---: | :---: |
@@ -218,7 +218,6 @@ Table 1. Optimized Parameters for XGB Model
 |colsample_bytree  | 0.75 | 0.722 |
 |reg_alpha  | 0.5 |0.723 |
 
-</p>
 <br>
 
 Table above shows final parameters and associated ROC score. As it is evidence, optimization is increased ROC scores from 0.68 to 0.72. The model is also regularized in order to avoid over-fitting. The optimized model is then used for final prediction on test set. 
