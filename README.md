@@ -17,7 +17,7 @@ Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kul
 In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
 
 # Table of Contents
-* [Data-Set Description](#DSD)
+1. [Data-Set Description](#DSD)
 2. Dimension Reduction<br>
 3. Exploratory Data Analysis (EDA)<br>
 4. Statistical Analysis & Hypothesis Testing<br>
