@@ -125,11 +125,9 @@ Ratio difference: 0.044
 Figure 6. Hypothesis test result for 3000 replications
 </p>
 <br>
-Mean ratio decrease: 0.044
-
-95% Confidence interval: \[ 0.00354751  0.07469717]
-
-P-value: 0.537
+Mean ratio decrease: 0.044<br>
+95% Confidence interval: \[ 0.00354751  0.07469717] <br>
+P-value: 0.537<br>
 
 
 High value of P-value (0.54) indicates that the difference in yield before and after F484's threshold (dash red line) is significant. In this case, at least 54% of statistically simulated results show 63% or more decrease in failed ratio if operation can take place after designated threshold, hence this feature can be considered as an optimization point for further actions.
@@ -163,7 +161,7 @@ Number of failed sample: 104
 
 Default Ratio (failed/total) : 0.066
 
-########################################
+########################################<br>
 
 Size of training data-set: (1096, 41)
 
@@ -222,7 +220,7 @@ Table above shows final parameters and associated ROC score. As it is evidence, 
 
 Model Report on Training Set:<br>
 Accuracy : 0.9334, AUC Score (Train): 0.898204<br>
-##################################################
+##################################################<br>
 Model Report on Test Set: <br>
 Accuracy : 0.9342, AUC Score (Test): 0.745674<br>
 
