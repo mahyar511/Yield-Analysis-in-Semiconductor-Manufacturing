@@ -206,8 +206,9 @@ Here, we are going to fine-tune significant parameters of the model in order to 
 <p align="center">
 Table 1. Optimized Parameters for XGB Model 
 </p> 
- 
+
 <p align="center">
+ 
 |Parameter |  Value | ROC |
  |:--- |:---: | :---: |
  |max_depth   | 6 | 0.683 |
@@ -216,6 +217,7 @@ Table 1. Optimized Parameters for XGB Model
 |subsample  | 0.8 | 0.722|
 |colsample_bytree  | 0.75 | 0.722 |
 |reg_alpha  | 0.5 |0.723 |
+
 </p>
 <br>
 
