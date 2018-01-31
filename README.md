@@ -17,9 +17,7 @@ Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kul
 In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
 
 # Table of Contents
-
-<b>
-* [Data-Set Description](#DSD)<br>
+* [Data-Set Description](#DSD)
 2. Dimension Reduction<br>
 3. Exploratory Data Analysis (EDA)<br>
 4. Statistical Analysis & Hypothesis Testing<br>
@@ -28,11 +26,11 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 7. Machine Learning Model Development<br>
 8. XGB Model Optimization<br>
 9. Final Note<br>
-</b>
+
 
 
 # <a name="DSD"></a>Data-Set Description
-###  Data-Set Description 
+ 
 <div style="text-align: justify">
 The SECOM data-set comes in 2 separate files. "secom_data", which is consisting of 1567 examples each with 591 features a 1567 x 591 matrix and "secom_labels", which is containing the classification labels and date time stamp for each example.
 Each example represents a single production entity with associated measured features and the labels represent a simple pass/fail yield for in house line testing and associated date time stamp. Where –1 corresponds to a pass and 1 corresponds to a fail and the data time stamp is for that specific test point. The SECOM data-set is anonymized, which results in no feature identification. In addition, all categorical data is converted to numerical value. <div> 
