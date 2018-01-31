@@ -7,11 +7,12 @@ A complex modern semiconductor manufacturing process is normally under consisten
 <img src="Figures/process.gif"  width="40%">  
 </p>
 <p align="center">
-Figure 1. [Basic Semiconductor Manufacturing Process] (http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
+ 
+Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
 </p>
 
 <br>
-In this project,  [SECOM] (http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
+In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: </div>
 
 # Table of Contents
 1. [Data-Set Description](#DSD)
@@ -31,7 +32,7 @@ In this project,  [SECOM] (http://archive.ics.uci.edu/ml/datasets/secom/) data-s
 <div style="text-align: justify">
 The SECOM data-set comes in 2 separate files. "secom_data", which is consisting of 1567 examples each with 591 features a 1567 x 591 matrix and "secom_labels", which is containing the classification labels and date time stamp for each example.
 Each example represents a single production entity with associated measured features and the labels represent a simple pass/fail yield for in house line testing and associated date time stamp. Where –1 corresponds to a pass and 1 corresponds to a fail and the data time stamp is for that specific test point. The SECOM data-set is anonymized, which results in no feature identification. In addition, all categorical data is converted to numerical value. <div> 
-<bt>
+<br>
 
 ### <a name="DR"></a> 2. Dimension Reduction
 <div style="text-align: justify">
@@ -40,6 +41,8 @@ As mentioned earlier, there are 591 features collected for each product, but onl
 <br>
 <p align="center">
 <img src="Figures/LASSO-01.png"  width="40%"> 
+</p>
+<p align="center"> 
 Figure 2. Feature Reduction Via Lasso Regularization
 </p>  
 <br>
@@ -53,9 +56,9 @@ We start exploring selected features by making correlation coefficient pair plot
 <p align="center">
 <img src="Figures/pcp.png"  width="60%"> 
 </p>  
-<div style="text-align: center">
+<p align="center">
 Figure 3. Correlation Coefficient Pair Plot
-<div>
+</p>
 <br>
  <div style="text-align: justify">
 Understanding data variations and outliers is the next step in exploratory data analysis. Box plot can visually represent both concepts in a concise way. As it is evident, some of these features vary couple order of magnitudes and almost all of them suffer from outliers. These are significant issues which needs to be considered later on. Unfortunately because of the anonymity of data-set, it is very difficult to understand nature of these outliers, in order to address them accordingly. It is very important that in model selection take all these factors into account. <div>
@@ -63,7 +66,7 @@ Understanding data variations and outliers is the next step in exploratory data 
 <p align="center">
 <img src="Figures/BoxPlot.png" > 
 </p>  
-<div style="text-align: center">
+<p align="center">
 Figure 4. Selected Features Box Plot  
-<div>
+</p>
 <br>
