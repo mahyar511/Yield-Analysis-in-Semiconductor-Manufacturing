@@ -201,10 +201,13 @@ Here, we are going to fine-tune significant parameters of the model in order to 
 **4- subsample:** Denotes the fraction of observations to be randomly samples for each tree \[default=1]<br>
 **5- colsample_bytree:** Denotes the fraction of columns to be randomly samples for each tree \[default=1]<br>
 **6- reg_alpha:** L1 regularization term on weight  \[default=0]<br>
-**7- reg_lambda:** L2 regularization term on weights \[default=1]<br>
 
 <br>
-
+<p align="center">
+Table 1. Optimized Parameters for XGB Model 
+</p> 
+ 
+<p align="center">
 |Parameter |  Value | ROC |
  |:--- |:---: | :---: |
  |max_depth   | 6 | 0.683 |
@@ -213,8 +216,7 @@ Here, we are going to fine-tune significant parameters of the model in order to 
 |subsample  | 0.8 | 0.722|
 |colsample_bytree  | 0.75 | 0.722 |
 |reg_alpha  | 0.5 |0.723 |
-|reg_lambda  | 1 | 0.723 |
-
+</p>
 <br>
 
 Table above shows final parameters and associated ROC score. As it is evidence, optimization is increased ROC scores from 0.68 to 0.72. The model is also regularized in order to avoid over-fitting. The optimized model is then used for final prediction on test set. 
