@@ -4,14 +4,15 @@
 A complex modern semiconductor manufacturing process is normally under consistent monitoring of signals/variables collected from sensors and process measurements. However, not all of these signals are equally valuable in a specific monitoring system. The measured signals contain a combination of useful information, irrelevant information as well as noise. It is often the case that useful information is buried in the later two. Engineers typically have a much larger number of signals than are actually required. If we consider each type of signal as a feature, then feature selection may be applied to identify the most relevant signals. The Process Engineers may then use these signals to determine key factors contributing to yield excursions downstream in the process. This will enable an increase in process throughput, decreased time to learning and reduce the per unit production costs.
 <br><br>
 <p align="center">
-<img src="Figures/process.gif"  width="40%">  
+<img src="Figures/process.gif"  width="50%">  
 </p>
 <p align="center">
-Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
+ 
+Figure 1. [Basic Semiconductor Manufacturing Process](https://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
 </p>
 
 <br>
-In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/)  data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: 
+In this project,  [SECOM](https://archive.ics.uci.edu/ml/datasets/secom/)  data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: 
 
 # Table of Contents
 1. [Data-Set Description](#DSD)
@@ -203,11 +204,8 @@ Here, we are going to fine-tune significant parameters of the model in order to 
 **6- reg_alpha:** L1 regularization term on weight  \[default=0]<br>
 
 <br>
-<p align="center">
-Table 1. Optimized Parameters for XGB Model 
-</p> 
 
-<center>
+Table 1. Optimized Parameters for XGB Model 
  
 |Parameter |  Value | ROC |
  |:--- |:---: | :---: |
@@ -218,7 +216,6 @@ Table 1. Optimized Parameters for XGB Model
 |colsample_bytree  | 0.75 | 0.722 |
 |reg_alpha  | 0.5 |0.723 |
 
-</center>
 <br>
 
 Table above shows final parameters and associated ROC score. As it is evidence, optimization is increased ROC scores from 0.68 to 0.72. The model is also regularized in order to avoid over-fitting. The optimized model is then used for final prediction on test set. 
