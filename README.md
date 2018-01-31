@@ -6,11 +6,8 @@ A complex modern semiconductor manufacturing process is normally under consisten
 <p align="center">
 <img src="Figures/process.gif"  width="40%">  
 </p>
-
 <p align="center">
- 
 Figure 1. [Basic Semiconductor Manufacturing Process](http://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
-
 </p>
 
 <br>
@@ -70,4 +67,43 @@ Understanding data variations and outliers is the next step in exploratory data 
 <p align="center">
 Figure 4. Selected Features Box Plot  
 </p>
+<br>
+
+
+To conduct further analysis, histogram of total and fail production for each selected feature was plotted. Quick survey of results reveals 3 different pattern in fail distribution over entire production.
+
+* #### Category I : Uniform Distribution of Pass & Fail
+<p align="center">
+<img src="Figures/F488.png">
+</p>
+<p align="center">
+ Figure -1. 5Example of Category I : Uniform Distribution of Pass & Fail
+</p> 
+<br>
+
+These are normal features with uniform distribution of both classes and can be used in predictive model development. 
+<br>
+
+* #### Category II : Non-uniform, Low Occurrence 
+<p align="center">
+<img src="F67.png">
+</p>
+<p align="center">
+Figure 5-2. Example of Category II : Non-uniform, Low Occurrence
+</p> 
+<br>
+
+In this category, production was not uniformly distributed throughout the feature variation. The majority of operation has been carried out at particular values and only tiny fraction occurred outside that zone. These features, probably made it through the list because of the outliers not meaningful variation. In final feature selection, this category can be dropped.
+<br>
+<br>
+* #### Category III : Non-Uniform Distribution of Pass & Fail
+<p align="center">
+<img src="Figure/F484.png">
+</p>
+<p align="center">
+Figure 5-3. Example of Category III : Non-Uniform Distribution of Pass & Fail
+</p>
+<br>
+
+This category shows non-uniform distribution of pass & fail samples. For features in this category, there are substantial range of values with relatively low failure rate. Therefore, these features are prime candidates for further process optimization. To take this to the next step, one needs first conduct hypothesis testing to figure out if these low failure rate is statistically significant and if true, incorporate more domain expertise to address the issue in real world operation. <div>
 <br>
