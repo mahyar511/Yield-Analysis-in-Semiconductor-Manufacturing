@@ -29,7 +29,7 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 
 
 
-# <a name="DSD"></a>Data-Set Description
+### <a name="DSD"></a>Data-Set Description
  
 <div style="text-align: justify">
 The SECOM data-set comes in 2 separate files. "secom_data", which is consisting of 1567 examples each with 591 features a 1567 x 591 matrix and "secom_labels", which is containing the classification labels and date time stamp for each example.
