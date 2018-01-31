@@ -112,6 +112,7 @@ This category shows non-uniform distribution of pass & fail samples. For feature
 
 Previous section showed that if some features subscribe to certain features, there might be significant difference in yield. However, visualization is not enough and it is necessary to statistically test this hypothesis. Here, F484, which has been highlighted in previous section, is examined as an example. 
 <br>
+
 Higher fail ratio: 0.069
 
 Lower fail ration: 0.025
@@ -124,6 +125,13 @@ Ratio difference: 0.044
 Figure 6. Hypothesis test result for 3000 replications
 </p>
 <br>
+Mean ratio decrease: 0.044
+
+95% Confidence interval: \[ 0.00354751  0.07469717]
+
+P-value: 0.537
+
+
 High value of P-value (0.54) indicates that the difference in yield before and after F484's threshold (dash red line) is significant. In this case, at least 54% of statistically simulated results show 63% or more decrease in failed ratio if operation can take place after designated threshold, hence this feature can be considered as an optimization point for further actions.
 
 ### <a name="TSA"></a> 5- Time Series Analysis
@@ -166,3 +174,79 @@ Size of overer sampling data_set: (2046, 41)
 
 ### <a name="MLMD"></a> 7- Machine Learning Model Development
 Due to data-set anonymity, which makes outlier removal impossible and also considering imbalanced data, which makes learning process quite difficult, we decided to choose **Extreme Gradient Boosting** Machine learning technique to develop our predictive model. This technique is not susceptible to outliers and can perfectly handle both numerical and categorical features. It also boosts learning process from hard-to-learn samples by increasing their wight factor in every iteration, which becomes handy in imbalance data-set. For model optimization we followed [AARSHAY JAIN](https://www.analyticsvidhya.com/blog/author/aarshay/) guideline. The complete article can be found at this [address](https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/).   
+
+Model Report on Training Set:<br>
+Accuracy : 0.9827, AUC Score (Train): 0.999987<br>
+
+<p align="center">
+<img src="Figures/ROC_00.png">
+</p>
+<p align="center">
+Figure 9. ROC plot for XGB Model before optimization 
+</p>
+<br>
+<p align="center">
+<img src="Figures/Feature_Importance_00.png">
+</p>
+<p align="center">
+Figure 10. Feature importance scores for XGB Model before optimization 
+</p>
+<br>
+Model preliminary result obviously shows over-fitting character as accuracy and ROC score are both close to one. Therefore, it is necessary to optimize model parameters to enhanced performance while avoiding over-fitting in final prediction.   
+
+### <a name="XGBMO"></a> 8- XGB Model Optimization
+Here, we are going to fine-tune significant parameters of the model in order to achieve best performance while avoiding over-fitting. Step by step model optimization is listed as follows;
+
+**1- max_depth:** The maximum depth of a tree\[default=6] <br>
+**2- min_child_weight:** Defines the minimum sum of weights of all observations required in a child \[default=1]<br>
+**3- gamma:**  Specifies the minimum loss reduction required to make a split  \[default=0]<br>
+**4- subsample:** Denotes the fraction of observations to be randomly samples for each tree \[default=1]<br>
+**5- colsample_bytree:** Denotes the fraction of columns to be randomly samples for each tree \[default=1]<br>
+**6- reg_alpha:** L1 regularization term on weight  \[default=0]<br>
+**7- reg_lambda:** L2 regularization term on weights \[default=1]<br>
+
+<br>
+Parameter |  Value | ROC |
+ :- |:-: | :-: |
+ max_depth   | 6 | 0.683 |
+min_child_weight   | 14 | 0.714 |
+gamma  | 0.4 | 0.720 |
+subsample  | 0.8 | 0.722|
+colsample_bytree  | 0.75 | 0.722 |
+reg_alpha  | 0.5 |0.723 |
+reg_lambda  | 1 | 0.723 |
+<br>
+
+Table above shows final parameters and associated ROC score. As it is evidence, optimization is increased ROC scores from 0.68 to 0.72. The model is also regularized in order to avoid over-fitting. The optimized model is then used for final prediction on test set. 
+
+
+Model Report on Training Set:<br>
+Accuracy : 0.9334, AUC Score (Train): 0.898204<br>
+##################################################
+Model Report on Test Set: <br>
+Accuracy : 0.9342, AUC Score (Test): 0.745674<br>
+
+<p align="center">
+<img src="Figures/ROC_01.png">
+</p>
+<p align="center">
+Figure 11. ROC plot for XGB Model after optimization 
+</p>
+<br>
+<p align="center">
+<img src="Figures/Feature_Importance_01.png">
+</p>
+<p align="center">
+Figure 12. Feature importance scores for XGB Model after optimization 
+</p>
+<br>
+Final results show lower accuracy and ROC score in training set, which indicates regularization has effectively damped over-fitting while overall model performance  improved. Feature importance plot has also shown no feature associated with category II (Sec. 3), which confirms our argument regarding insignificant nature of this category of feature despite being picked by LASSO algorithm.
+
+### <a name="FN"></a> 9- Final Note:
+
+In this work, **SECOM** data-set is under gone complete analysis in order to bring practical insight from collected data during semiconductor manufacturing process. Main findings of this analysis is summarized below:
+
+1. High dimensional original data is reduced to only 41 significant features, which latter used for further analysis.<br>
+2. After statistical hypothesis testing and time series analysis, number of features (F24, F88, F161, F483, F484) is recommended for process optimization and productivity enhancement.<br>
+3. Data-driven model is developed based on **Extreme Gradient Boosting** method, in order to increase prediction power over operation. The model is also finely tuned and optimized for actual implementation.<br>
+4. Final feature importance is provided based on prediction model which can be used by field expert to prioritize process control.
