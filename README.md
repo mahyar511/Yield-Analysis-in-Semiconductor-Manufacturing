@@ -32,7 +32,7 @@ In this project,  [SECOM](http://archive.ics.uci.edu/ml/datasets/secom/) data-se
 
 
 
-<br>
+
 <a id="DSD"></a>
 ###  1- Data-Set Description 
 <div style="text-align: justify">
@@ -48,6 +48,7 @@ As mentioned earlier, there are 591 features collected for each product, but onl
 <br>
 <p align="center">
 <img src="Figures/LASSO-01.png"  width="40%"> 
+Figure 2. Feature Reduction Via Lasso Regularization  
 </p>  
 <div style="text-align: center">
 Figure 2. Feature Reduction Via Lasso Regularization
