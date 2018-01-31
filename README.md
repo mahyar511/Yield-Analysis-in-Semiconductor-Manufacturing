@@ -77,7 +77,7 @@ To conduct further analysis, histogram of total and fail production for each sel
 <img src="Figures/F488.png">
 </p>
 <p align="center">
- Figure -1. 5Example of Category I : Uniform Distribution of Pass & Fail
+ Figure 5-1. Example of Category I : Uniform Distribution of Pass & Fail
 </p> 
 <br>
 
@@ -86,7 +86,7 @@ These are normal features with uniform distribution of both classes and can be u
 
 * #### Category II : Non-uniform, Low Occurrence 
 <p align="center">
-<img src="F67.png">
+<img src="Figures/F67.png">
 </p>
 <p align="center">
 Figure 5-2. Example of Category II : Non-uniform, Low Occurrence
@@ -98,7 +98,7 @@ In this category, production was not uniformly distributed throughout the featur
 <br>
 * #### Category III : Non-Uniform Distribution of Pass & Fail
 <p align="center">
-<img src="Figure/F484.png">
+<img src="Figures/F484.png">
 </p>
 <p align="center">
 Figure 5-3. Example of Category III : Non-Uniform Distribution of Pass & Fail
