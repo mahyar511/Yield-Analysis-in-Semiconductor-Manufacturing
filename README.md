@@ -218,6 +218,7 @@ Table 1. Optimized Parameters for XGB Model
 |colsample_bytree  | 0.75 | 0.722 |
 |reg_alpha  | 0.5 |0.723 |
 
+</center>
 <br>
 
 Table above shows final parameters and associated ROC score. As it is evidence, optimization is increased ROC scores from 0.68 to 0.72. The model is also regularized in order to avoid over-fitting. The optimized model is then used for final prediction on test set. 
