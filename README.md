@@ -5,12 +5,8 @@ A complex modern semiconductor manufacturing process is normally under consisten
 <br><br>
 <p align="center">
 <img src="Figures/process.gif"  width="50%">  
+<a> Figure 1. [Basic Semiconductor Manufacturing Process](https://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/) </a>
 </p>
-<p align="center">
- 
-Figure 1. [Basic Semiconductor Manufacturing Process](https://blog.associatie.kuleuven.be/danhuayao/introduction-of-the-metallic-contamination/)
-</p>
-
 <br>
 In this project,  [SECOM](https://archive.ics.uci.edu/ml/datasets/secom/)  data-set is first screened in order to identify effective parameters on semiconductor production yield. Then, more analysis is conducted to bring more insight from the data and recommend optimization potential throughout the process. At the end, machine learning technique is used to develop a data-driven model for yield prediction at final stage of fabrication, based on operation data and sensor measurements gathered throughout the process. This notebook is organized as follows: 
 
